@@ -359,7 +359,14 @@ def clockConnection(clock):
             
 def getName(fileStr):
     extract_pattern = "\s*entity\s+(.*7_0_0)\s+is.*"
-    return re.search(extract_pattern, fileStr).group(1)
+    extract_pattern1 = "\s*entity\s+(.*7_0)\s+is.*"
+    res0_0 = re.search(extract_pattern, fileStr)
+    res0 = re.search(extract_pattern1, fileStr)
+    if res0_0:
+        return res0_0.group(1)
+    elif res0:
+        return res0.group(1)
+    
 
 def getNameFromFile(fileName):
     with open(fileName) as file:
@@ -533,14 +540,14 @@ compile_do_script = """# Script to compile the CoSimulation files (auto-generate
 vlib riviera/work
 vmap xil_defaultlib riviera/xil_defaultlib
 # Zynq System Wrapper
-ccomp -sc -c -o o1.o --std=c++11 -g -I./../src/libsystemctlm-soc/libremote-port/ -I./../src/libsystemctlm-soc/ ./../src/libsystemctlm-soc/soc/xilinx/zynq/xilinx-zynq.cc
+ccomp -sc -c -o o1.o -g -I./../src/libsystemctlm-soc/libremote-port/ -I./../src/libsystemctlm-soc/ ./../src/libsystemctlm-soc/soc/xilinx/zynq/xilinx-zynq.cc
 
 # Compile C files (not SystemC) for libremote-port
-ccomp -sc -c -o o2.o --std=c++11 -x c -fPIC -g ./../src/libsystemctlm-soc/libremote-port/safeio.c
+ccomp -sc -c -o o2.o -x c -fPIC -g ./../src/libsystemctlm-soc/libremote-port/safeio.c
 # The following file was patched to solve issues (maybe a flag would have fixed them too) TODO : Check this out
-ccomp -sc -c -o o3.o --std=c++11 -x c -fPIC -g ./../src/libsystemctlm-soc/libremote-port/remote-port-proto.c
+ccomp -sc -c -o o3.o -x c -fPIC -g ./../src/libsystemctlm-soc/libremote-port/remote-port-proto.c
 # The following file was patched to solve issues
-ccomp -sc -c -o o4.o --std=c++11 -x c -fPIC -g ./../src/libsystemctlm-soc/libremote-port/remote-port-sk.c
+ccomp -sc -c -o o4.o -x c -fPIC -g ./../src/libsystemctlm-soc/libremote-port/remote-port-sk.c
 
 # Lib Remote Port (RP) SystemC files
 ccomp -sc -c -o o5.o -g -I./../src/libsystemctlm-soc/libremote-port/ -I./../src/libsystemctlm-soc/ ./../src/libsystemctlm-soc/libremote-port/remote-port-tlm.cc
@@ -549,7 +556,7 @@ ccomp -sc -c -o o7.o -g -I./../src/libsystemctlm-soc/libremote-port/ -I./../src/
 ccomp -sc -c -o o8.o -g -I./../src/libsystemctlm-soc/libremote-port/ -I./../src/libsystemctlm-soc/ ./../src/libsystemctlm-soc/libremote-port/remote-port-tlm-wires.cc
 
 # The main Zynq SystemC-TLM CoSimulation entity
-ccomp -sc -c -o o9.o  -D__M_AXI_GP0_ENABLE__=1 -D__M_AXI_GP0_ADDR_WIDTH__=32 -D__M_AXI_GP0_DATA_WIDTH__=32 -D__M_AXI_GP0_ID_WIDTH__=12 -D__M_AXI_GP0_AXLEN_WIDTH__=4 -D__M_AXI_GP0_AXLOCK_WIDTH__=2 -g -I./../src/libsystemctlm-soc/libremote-port/ -I./../src/libsystemctlm-soc/ -I./../src/libsystemctlm-soc/soc/xilinx/zynq/ -I./../src/src_sc -I. -I./../src/libsystemctlm-soc/tlm-bridges/ ./../src/src_sc/zynq7_ps.cc
+eval ccomp -sc -c -o o9.o -D__QEMU_PATH_TO_SOCKET__=$env(RPORT_PATH_SC) -D__M_AXI_GP0_ENABLE__=1 -D__M_AXI_GP0_ADDR_WIDTH__=32 -D__M_AXI_GP0_DATA_WIDTH__=32 -D__M_AXI_GP0_ID_WIDTH__=12 -D__M_AXI_GP0_AXLEN_WIDTH__=4 -D__M_AXI_GP0_AXLOCK_WIDTH__=2 -g -I./../src/libsystemctlm-soc/libremote-port/ -I./../src/libsystemctlm-soc/ -I./../src/libsystemctlm-soc/soc/xilinx/zynq/ -I./../src/src_sc -I. -I./../src/libsystemctlm-soc/tlm-bridges/ ./../src/src_sc/zynq7_ps.cc
 ccomp -sc o1.o o2.o o3.o o4.o o5.o o6.o o7.o o8.o o9.o -o zynq7_ps
 addsc -work xil_defaultlib zynq7_ps.so
 
@@ -557,7 +564,7 @@ addsc -work xil_defaultlib zynq7_ps.so
 vcom -work xil_defaultlib ./../src/src_vhdl/zynq7_ps_wrapper.vhd
 
 # Compile VHDL BD wrapper (auto-generated)
-vcom -work xil_defaultlib -2008 ./../src/design_1_processing_system7_0_0.vhd
+vcom -work xil_defaultlib -2008 ./../src/[BD_WRAPPER_FILE_NAME]
 
 # Simulate (requires QEMU to be launched, twice, once for the optimization and then again for the simulation)
 #
@@ -608,6 +615,8 @@ def main():
     filesInSimDir = [f for f in listdir(dirPath) if isfile(join(dirPath, f))]
     
     if ("system7_0_0" in f):
+        print("Could find Processing System in file")
+    elif ("sys_ps7" in f):
         print("Could find Processing System in file")
     else:
         print("Could not find processing system in file " + fileName)

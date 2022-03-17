@@ -31,6 +31,8 @@
 #include <signal.h>
 #include <unistd.h>
 #include <assert.h>
+#include <iostream>
+#include <string>
 
 // System C includes
 #include "systemc.h"
@@ -62,8 +64,16 @@ public:
     //--------------------------------------------------------------------------------
     // Generics //
     //--------------------------------------------------------------------------------
+	
 
-    std::string QEMU_PATH_TO_SOCKET_G = "unix:/home2/projects/systemc_tysom/viv/tysom1_petalinux/qemu_cosim/qemu-tmp/qemu-rport-_cosim@0";
+    #ifdef __QEMU_PATH_TO_SOCKET__
+        #define pathQ(x) #x
+        #define PathQ(x) pathQ(x)
+        std::string QEMU_PATH_TO_SOCKET_G = std::string("unix:") + std::string(PathQ(__QEMU_PATH_TO_SOCKET__));
+    #else
+        std::string QEMU_PATH_TO_SOCKET_G = "unix:/path/to/qemu-rport-_cosim@0";
+    #endif
+
     int QEMU_SYNC_QUANTUM_G = 10000;
     int FCLK_CLK0_PERIOD_IN_NS_G = 10000;
     int FCLK_CLK1_PERIOD_IN_NS_G = 10000;
@@ -424,10 +434,10 @@ public:
                    M_AXI_GP0_AXLOCK_WIDTH_G,
                    0,
                    0,
-				   0,
-				   0,
-				   0
-				   > *tlm2axi_gp0;
+                   0,
+                   0,
+                   0
+                    > *tlm2axi_gp0;
 
     // Pointer to bridge for M AXI GP1
     tlm2axi_bridge<M_AXI_GP1_ADDR_WIDTH_G,
@@ -1148,13 +1158,9 @@ public:
 
         // Modules
         ////////////
-
-        // Set the path to the socket from the generic parameter
-#ifdef __QEMU_PATH_TO_SOCKET__
-        zynq("zynq", __QEMU_PATH_TO_SOCKET__),
-#else
+        
         zynq("zynq", QEMU_PATH_TO_SOCKET_G.c_str()),
-#endif
+
 
         // Signals
         ////////////
@@ -1508,11 +1514,8 @@ public:
     {
         // QEMU related
         /////////////////
-#ifdef __QEMU_PATH_TO_SOCKET__
-        cout << "QEMU connection path is : " << __QEMU_PATH_TO_SOCKET__ << endl;
-#else
-        cout << "QEMU connection path is : " << QEMU_PATH_TO_SOCKET_G << endl;
-#endif
+	cout << "QEMU connection path is : " << QEMU_PATH_TO_SOCKET_G << endl;
+
         // Set the global sim time quantum from the generic parameter
         m_qk.set_global_quantum(sc_time((double) QEMU_SYNC_QUANTUM_G, SC_NS));
 
