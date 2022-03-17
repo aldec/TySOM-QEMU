@@ -1,0 +1,17 @@
+/tysom*_petalinux/
+
+/src/libsystemctlm-soc
+/src/src_sc
+/src/src_vhdl
+/src/design_1_processing_system7_0_0.vhd
+
+/riviera/*.asdb
+/riviera/*.cfg
+/riviera/*.log
+/riviera/*.o
+/riviera/*.so
+/riviera/all.do
+/riviera/compile
+/riviera/riviera
+/riviera/work
+/riviera/zynq7_compile_cosim.do
