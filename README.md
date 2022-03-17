@@ -23,5 +23,10 @@ https://www.aldec.com/en/support/resources/documentation/articles/1710
 `./run_example_cosim.sh`
 - The QEMU process should appear in a new terminal window, and in the meantime, the co-simulation in Riviera should begin. 
 
-
-
+Limitations:
+- Windows is not supported.
+- The supported platforms :
+  Red Hat Enterprise Workstation/Server 7.4, 7.5, 7.6, 7.7, 7.8, 7.9, 8.1, 8.2 (64-bit)
+  CentOS Workstation/Server 7.4, 7.5, 7.6, 7.7, 7.8, 7.9, 8.1, 8.2 (64-bit)
+  Ubuntu Linux Workstation/Server 16.04.5, 16.04.6, 18.04.1, 18.04.2, 18.04.3, 18.04.4,18.04.5, 20.04, 20.04.1 (64-bit)
+- The Example is verified with operating systems: Centos 7.x  and Ubuntu 20.04.
