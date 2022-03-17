@@ -20,6 +20,12 @@ https://www.aldec.com/en/support/resources/documentation/articles/1710
 
 4. Running co-simulation
 
+NOTE:   Make sure if simulation library for Riviera-Pro simulator is ready to use. If not please rebuild library under Vivado with Riviera-Pro.
+        check if link to library for simulation is correst set as below:
+        /riviera/sim_top_compile.do
+        set XILINX_LIB_PATH "$env(RIVIERA_PATH)/Xilinx_lib"
+
+
 `./run_example_cosim.sh`
 - The QEMU process should appear in a new terminal window, and in the meantime, the co-simulation in Riviera should begin. 
 
