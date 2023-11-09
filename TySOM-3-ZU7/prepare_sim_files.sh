@@ -4,7 +4,9 @@ IFS=$'\n\t'
 
 source ./config.sh
 
-mkdir -p riviera
+if [ ! -d riviera ]; then
+    mkdir -p riviera
+fi
 
 cp -f hardware/${hw_project_name}/${hw_project_name}.sim/sim_1/behav/riviera/${hw_design_name}_wrapper_compile.do riviera
 cp -f hardware/${hw_project_name}/${hw_project_name}.sim/sim_1/behav/riviera/${hw_design_name}_wrapper_simulate.do riviera
