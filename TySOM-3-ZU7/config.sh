@@ -5,10 +5,9 @@
 #(e.g. /$TOOLS_DIR/Xilinx/Linux/petalinux-v2023.1)
 #(e.g. /$TOOLS_DIR/Xilinx/Vivado/2023.1)
 
-
-export RIVIERA_PATH=/path/to/riviera-pro-2023.04/
+export RIVIERA_PATH=/path/to/Riviera-Pro-2023.04/
 export PETALINUX_PATH=/path/to/PetaLinux/2023.1/tool/
-export VIVADO_PATH=/path/to/Vivado/2023.1/
+export VIVADO_PATH=/path/to/Vivado/2023.1
 
 export hw_project_name=project_1
 export hw_design_name=design_1

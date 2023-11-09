@@ -1,30 +1,54 @@
 # SystemC QEMU Co-simulation
 
 1. Requirements
-   - Vivado 2021.1
-   - Petalinux 2021.1
-   - Riviera-Pro 2021.10
+   - Vivado 2023.1
+   - Petalinux 2023.1
+   - Riviera-Pro 2023.04
 
 2. Simulator Library
-   - Generate Xilinx simulation libraries using tutorial below:
+   - Generate Xilinx simulation libraries (unisim,unisims) using tutorial below:
 
      https://www.aldec.com/en/support/resources/documentation/articles/1710
+     
+     or 
+     
+    - Get pre-compiled libraries from 
+      https://www.aldec.com/en/downloads (an account is required)
+     
+
+3. Change directory to `TySOM-2-7Z100` or `TySOM-3-ZU7`:
+
+   ```sh
+   cd TySOM-2-7Z100 
+   ```
+   or
+   ```sh
+   cd TySOM-3-ZU7 
+   ```
 
 3. Preparing co-simulation files
    1. **Modify config.sh script. Set the proper paths to Riviera-Pro simulator and Xilinx Petalinux tool.**
-   2. Run `prepare_files.sh` script (this may take around 30 minutes for the petalinux project to be built)
+   2. Run scripts
 
-      `./prepare_files.sh`
+     ```sh
+   ./prepare_hardware.sh
+   ./prepare_linux.sh
+   ./prepare_sim_files.sh
+   ```
 
 4. Running co-simulation
 
    **NOTE**: Make sure if simulation library for Riviera-Pro simulator is ready
    to use. If not, please rebuild the library under Vivado with Riviera-Pro.
    Check if path to the library for simulation is set correctly in the
-   `riviera/sim_top_compile.do` file:
+   `riviera/design_1_wrapper_compile.do` file:
 
    ```tcl
-   set XILINX_LIB_PATH "$env(RIVIERA_PATH)/Xilinx_lib"
+   amap -link /path/to/generated/libraries/library.cfg
+   ```
+   or 
+   ```tcl
+   amap unisim /path/to/unisim.lib
    ```
 
    `./run_example_cosim.sh`
