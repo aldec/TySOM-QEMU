@@ -8,21 +8,22 @@
 2. Vivado board definition
     - Add TySOM defintion to Vivado 
     
-    https://github.com/aldec/TySOM-2-7Z100/tree/master/Vivado-board_files
-    
-    or 
+        https://github.com/aldec/TySOM-2-7Z100/tree/master/Vivado-board_files
+        
+        or 
 
-    https://github.com/aldec/TySOM-3-ZU7EV/tree/master/Vivado-board_files
+        https://github.com/aldec/TySOM-3-ZU7EV/tree/master/Vivado-board_files
 
 3. Simulator Library
-   - Generate Xilinx simulation libraries (unisim,unisims) using tutorial below:
+   - Generate Xilinx simulation libraries (unisim, unisims_ver, unimacro_ver, secureip) using tutorial below:
 
-     https://www.aldec.com/en/support/resources/documentation/articles/1710
+        https://www.aldec.com/en/support/resources/documentation/articles/1710
      
      or 
      
-    - Get pre-compiled libraries from 
-      https://www.aldec.com/en/downloads (an account is required)
+    - Get pre-compiled libraries from
+     
+        https://www.aldec.com/en/downloads (an account is required)
      
 
 4. Board selection `TySOM-2-7Z100` or `TySOM-3-ZU7`:
@@ -57,7 +58,10 @@
    ```
    or 
    ```tcl
+   amap secureip /path/to/secureip.lib
    amap unisim /path/to/unisim.lib
+   amap unisims_ver /path/to/unisims_ver.lib
+   amap unimacro_ver /path/to/unimacro_ver.lib
    ```
 
    `./run_example_cosim.sh`
