@@ -5,16 +5,7 @@
    - Petalinux 2023.1
    - Riviera-Pro 2023.04
    
-2. Vivado board definition
-    - Add TySOM defintion to Vivado 
-    
-        https://github.com/aldec/TySOM-2-7Z100/tree/master/Vivado-board_files
-        
-        or 
-
-        https://github.com/aldec/TySOM-3-ZU7EV/tree/master/Vivado-board_files
-
-3. Simulator Library
+2. Simulator Library
    - Generate Xilinx simulation libraries (unisim, unisims_ver, unimacro_ver, secureip) using tutorial below:
 
         https://www.aldec.com/en/support/resources/documentation/articles/1710
@@ -24,9 +15,8 @@
     - Get pre-compiled libraries from
      
         https://www.aldec.com/en/downloads (an account is required)
-     
 
-4. Board selection `TySOM-2-7Z100` or `TySOM-3-ZU7`:
+3. Board selection `TySOM-2-7Z100` or `TySOM-3-ZU7`:
 
    ```sh
    cd TySOM-2-7Z100 
@@ -36,7 +26,7 @@
    cd TySOM-3-ZU7 
    ```
 
-5. Preparing co-simulation files
+4. Preparing co-simulation files
    1. **Modify config.sh script. Set the proper paths to Riviera-Pro simulator and Xilinx Petalinux tool.**
    2. Run scripts
 
@@ -46,7 +36,7 @@
    ./prepare_sim_files.sh
    ```
 
-6. Running co-simulation
+5. Running co-simulation
 
    **NOTE**: Make sure if simulation library for Riviera-Pro simulator is ready
    to use. If not, please rebuild the library under Vivado with Riviera-Pro.
