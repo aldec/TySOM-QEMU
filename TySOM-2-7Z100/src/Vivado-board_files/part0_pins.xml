@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?> 
+<part_info part_name="xc7z100ffg900-2">
+	<pins>
+		<pin index="0" name ="switch_8bits_tri_i_0" iostandard="LVCMOS18" loc="K13"/>
+		<pin index="1" name ="switch_8bits_tri_i_1" iostandard="LVCMOS18" loc="J14"/>
+		<pin index="2" name ="switch_8bits_tri_i_2" iostandard="LVCMOS18" loc="H14"/>
+		<pin index="3" name ="switch_8bits_tri_i_3" iostandard="LVCMOS18" loc="K15"/>
+		<pin index="4" name ="switch_8bits_tri_i_4" iostandard="LVCMOS18" loc="J15"/>
+		<pin index="5" name ="switch_8bits_tri_i_5" iostandard="LVCMOS18" loc="J16"/>
+		<pin index="6" name ="switch_8bits_tri_i_6" iostandard="LVCMOS18" loc="H16"/>
+		<pin index="7" name ="switch_8bits_tri_i_7" iostandard="LVCMOS18" loc="G17"/>
+		<pin index="8" name ="leds_4bits_tri_o_0" iostandard="LVCMOS18" loc="L14"/>
+		<pin index="9" name ="leds_4bits_tri_o_1" iostandard="LVCMOS18" loc="J13"/>
+		<pin index="10" name ="leds_4bits_tri_o_2" iostandard="LVCMOS18" loc="H13"/>
+		<pin index="11" name ="leds_4bits_tri_o_3" iostandard="LVCMOS18" loc="L13"/>
+		
+		<pin index="12" name ="CLK_MGTX_CLK0N" loc="AF9"/>
+		<pin index="13" name ="CLK_MGTX_CLK0P" loc="AF10"/>
+		<pin index="14" name ="CLK_MGTX_CLK1N" loc="AC7"/>
+		<pin index="15" name ="CLK_MGTX_CLK1P" loc="AC8"/>
+		<pin index="16" name ="CLK_MGTX_CLK2N" loc="W7"/>
+		<pin index="17" name ="CLK_MGTX_CLK2P" loc="W8"/>
+		<pin index="18" name ="CLK_MGTX_CLK3N" loc="R7"/>
+		<pin index="19" name ="CLK_MGTX_CLK3P" loc="R8"/>
+		<pin index="20" name ="CLK_125M" iostandard="LVCMOS18" loc="E16"/>
+		<pin index="21" name ="CLK_50M" iostandard="LVCMOS18" loc="D15"/>
+		<pin index="22" name ="CLK_MGTX_SEL" iostandard="LVCMOS18" loc="L15"/>
+		
+		<pin index="23" name ="HDMI_F_DE" iostandard="LVCMOS18" loc="C17"/>
+		<pin index="24" name ="HDMI_F_D8" iostandard="LVCMOS18" loc="A17"/>
+		<pin index="25" name ="HDMI_F_D9" iostandard="LVCMOS18" loc="G16"/>
+		<pin index="26" name ="HDMI_F_D10" iostandard="LVCMOS18" loc="B16"/>
+		<pin index="27" name ="HDMI_F_D11" iostandard="LVCMOS18" loc="D14"/>
+		<pin index="28" name ="HDMI_F_D12" iostandard="LVCMOS18" loc="A14"/>
+		<pin index="29" name ="HDMI_F_D13" iostandard="LVCMOS18" loc="C14"/>
+		<pin index="30" name ="HDMI_F_D14" iostandard="LVCMOS18" loc="A12"/>
+		<pin index="31" name ="HDMI_F_D15" iostandard="LVCMOS18" loc="B11"/>
+		<pin index="32" name ="HDMI_F_D16" iostandard="LVCMOS18" loc="C11"/>
+		<pin index="33" name ="HDMI_F_D17" iostandard="LVCMOS18" loc="E12"/>
+		<pin index="34" name ="HDMI_F_D18" iostandard="LVCMOS18" loc="A15"/>
+		<pin index="35" name ="HDMI_F_D19" iostandard="LVCMOS18" loc="B14"/>
+		<pin index="36" name ="HDMI_F_D20" iostandard="LVCMOS18" loc="A13"/>
+		<pin index="37" name ="HDMI_F_D21" iostandard="LVCMOS18" loc="C13"/>
+		<pin index="38" name ="HDMI_F_D22" iostandard="LVCMOS18" loc="B12"/>
+		<pin index="39" name ="HDMI_F_D23" iostandard="LVCMOS18" loc="C12"/>
+		<pin index="40" name ="HDMI_F_HSYNC" iostandard="LVCMOS18" loc="E17"/>
+		<pin index="41" name ="HDMI_F_VSYNC" iostandard="LVCMOS18" loc="B17"/>
+		<pin index="42" name ="HDMI_F_CLK" iostandard="LVCMOS18" loc="D13"/>
+		<pin index="43" name ="HDMI_F_IIC_SCL" iostandard="LVCMOS18" loc="B15"/>
+		<pin index="43" name ="HDMI_F_IIC_SDA" iostandard="LVCMOS18" loc="D16"/>
+		
+		<!-- FMC A connector -->
+		<pin index="164" name="fmc_hpc0_la00_cc_n" loc="U27"/>
+		<pin index="165" name="fmc_hpc0_la00_cc_p" loc="U26"/>
+		<pin index="166" name="fmc_hpc0_la01_cc_n" loc="V26"/>
+		<pin index="167" name="fmc_hpc0_la01_cc_p" loc="U25"/>
+		<pin index="168" name="fmc_hpc0_la02_n" loc="P28"/>
+		<pin index="169" name="fmc_hpc0_la02_p" loc="N28"/>
+		<pin index="170" name="fmc_hpc0_la03_n" loc="U30"/>
+		<pin index="171" name="fmc_hpc0_la03_p" loc="T30"/>
+		<pin index="172" name="fmc_hpc0_la04_n" loc="Y27"/>
+		<pin index="173" name="fmc_hpc0_la04_p" loc="Y26"/>
+		<pin index="174" name="fmc_hpc0_la05_n" loc="W26"/>
+		<pin index="175" name="fmc_hpc0_la05_p" loc="W25"/>
+		<pin index="176" name="fmc_hpc0_la06_n" loc="AA28"/>
+		<pin index="177" name="fmc_hpc0_la06_p" loc="AA27"/>
+		<pin index="178" name="fmc_hpc0_la07_n" loc="P29"/>
+		<pin index="179" name="fmc_hpc0_la07_p" loc="N29"/>
+		<pin index="180" name="fmc_hpc0_la08_n" loc="T28"/>
+		<pin index="181" name="fmc_hpc0_la08_p" loc="R28"/>
+		<pin index="182" name="fmc_hpc0_la09_n" loc="AE26"/>
+		<pin index="183" name="fmc_hpc0_la09_p" loc="AD25"/>
+		<pin index="184" name="fmc_hpc0_la10_n" loc="U29"/>
+		<pin index="185" name="fmc_hpc0_la10_p" loc="T29"/>
+		<pin index="186" name="fmc_hpc0_la11_n" loc="T23"/>
+		<pin index="187" name="fmc_hpc0_la11_p" loc="T22"/>
+		<pin index="188" name="fmc_hpc0_la12_n" loc="R23"/>
+		<pin index="189" name="fmc_hpc0_la12_p" loc="R22"/>
+		<pin index="190" name="fmc_hpc0_la13_n" loc="V29"/>
+		<pin index="191" name="fmc_hpc0_la13_p" loc="V28"/>
+		<pin index="192" name="fmc_hpc0_la14_n" loc="W30"/>
+		<pin index="193" name="fmc_hpc0_la14_p" loc="W29"/>
+		<pin index="194" name="fmc_hpc0_la15_n" loc="AA30"/>
+		<pin index="195" name="fmc_hpc0_la15_p" loc="Y30"/>
+		<pin index="196" name="fmc_hpc0_la16_n" loc="T25"/>
+		<pin index="197" name="fmc_hpc0_la16_p" loc="T24"/>
+		<pin index="198" name="fmc_hpc0_la17_cc_n" loc="AD28"/>
+		<pin index="199" name="fmc_hpc0_la17_cc_p" loc="AC28"/>
+		<pin index="200" name="fmc_hpc0_la18_cc_n" loc="AF28"/>
+		<pin index="201" name="fmc_hpc0_la18_cc_p" loc="AE28"/>
+		<pin index="202" name="fmc_hpc0_la19_n" loc="AD26"/>
+		<pin index="203" name="fmc_hpc0_la19_p" loc="AC26"/>
+		<pin index="204" name="fmc_hpc0_la20_n" loc="AC27"/>
+		<pin index="205" name="fmc_hpc0_la20_p" loc="AB27"/>
+		<pin index="206" name="fmc_hpc0_la21_n" loc="AG27"/>
+		<pin index="207" name="fmc_hpc0_la21_p" loc="AG26"/>
+		<pin index="208" name="fmc_hpc0_la22_n" loc="AF27"/>
+		<pin index="209" name="fmc_hpc0_la22_p" loc="AE27"/>
+		<pin index="210" name="fmc_hpc0_la23_n" loc="AF25"/>
+		<pin index="211" name="fmc_hpc0_la23_p" loc="AE25"/>
+		<pin index="212" name="fmc_hpc0_la24_n" loc="AJ29"/>
+		<pin index="213" name="fmc_hpc0_la24_p" loc="AJ28"/>
+		<pin index="214" name="fmc_hpc0_la25_n" loc="AK28"/>
+		<pin index="215" name="fmc_hpc0_la25_p" loc="AK27"/>
+		<pin index="216" name="fmc_hpc0_la26_n" loc="AK26"/>
+		<pin index="217" name="fmc_hpc0_la26_p" loc="AJ26"/>
+		<pin index="218" name="fmc_hpc0_la27_n" loc="AH27"/>
+		<pin index="219" name="fmc_hpc0_la27_p" loc="AH26"/>
+		<pin index="220" name="fmc_hpc0_la28_n" loc="AK30"/>
+		<pin index="221" name="fmc_hpc0_la28_p" loc="AJ30"/>
+		<pin index="222" name="fmc_hpc0_la29_n" loc="AH29"/>
+		<pin index="223" name="fmc_hpc0_la29_p" loc="AH28"/>
+		<pin index="224" name="fmc_hpc0_la30_n" loc="AG30"/>
+		<pin index="225" name="fmc_hpc0_la30_p" loc="AF30"/>
+		<pin index="226" name="fmc_hpc0_la31_n" loc="AG29"/>
+		<pin index="227" name="fmc_hpc0_la31_p" loc="AF29"/>
+		<pin index="228" name="fmc_hpc0_la32_n" loc="AE30"/>
+		<pin index="229" name="fmc_hpc0_la32_p" loc="AD30"/>
+		<pin index="230" name="fmc_hpc0_la33_n" loc="AD29"/>
+		<pin index="231" name="fmc_hpc0_la33_p" loc="AC29"/>
+
+		<pin index="264" name="fmc_hpc0_clk0_m2c_n" loc="AD19"/>
+		<pin index="265" name="fmc_hpc0_clk0_m2c_p" loc="AD18"/>
+		<pin index="266" name="fmc_hpc0_clk1_m2c_n" loc="AC19"/>
+		<pin index="267" name="fmc_hpc0_clk1_m2c_p" loc="AC18"/>
+
+		<pin index="268" name="fmc_hpc0_gbtclk0_m2c_p" loc="AD9"/>
+		<pin index="269" name="fmc_hpc0_gbtclk0_m2c_n" loc="AD10"/>
+		<pin index="270" name="fmc_hpc0_gbtclk1_m2c_p" loc="AA7"/>
+		<pin index="271" name="fmc_hpc0_gbtclk1_m2c_n" loc="AA8"/>
+
+		<pin index="272" name="fmc_hpc0_ha00_cc_n" loc="T27"/>
+		<pin index="273" name="fmc_hpc0_ha00_cc_p" loc="R27"/>
+		<pin index="274" name="fmc_hpc0_ha01_cc_n" loc="R26"/>
+		<pin index="275" name="fmc_hpc0_ha01_cc_p" loc="R25"/>
+		<pin index="276" name="fmc_hpc0_ha02_n" loc="N27"/>
+		<pin index="277" name="fmc_hpc0_ha02_p" loc="N26"/>
+		<pin index="278" name="fmc_hpc0_ha03_n" loc="P26"/>
+		<pin index="279" name="fmc_hpc0_ha03_p" loc="P25"/>
+		<pin index="280" name="fmc_hpc0_ha04_n" loc="V22"/>
+		<pin index="281" name="fmc_hpc0_ha04_p" loc="U22"/>
+		<pin index="282" name="fmc_hpc0_ha05_n" loc="AB30"/>
+		<pin index="283" name="fmc_hpc0_ha05_p" loc="AB29"/>
+		<pin index="284" name="fmc_hpc0_ha06_n" loc="W28"/>
+		<pin index="285" name="fmc_hpc0_ha06_p" loc="V27"/>
+		<pin index="286" name="fmc_hpc0_ha07_n" loc="AA29"/>
+		<pin index="287" name="fmc_hpc0_ha07_p" loc="Y28"/>
+		<pin index="288" name="fmc_hpc0_ha08_n" loc="P24"/>
+		<pin index="289" name="fmc_hpc0_ha08_p" loc="P23"/>
+		<pin index="290" name="fmc_hpc0_ha09_n" loc="W24"/>
+		<pin index="291" name="fmc_hpc0_ha09_p" loc="V23"/>
+		<pin index="292" name="fmc_hpc0_ha10_n" loc="V24"/>
+		<pin index="293" name="fmc_hpc0_ha10_p" loc="U24"/>
+		<pin index="294" name="fmc_hpc0_ha11_n" loc="R30"/>
+		<pin index="295" name="fmc_hpc0_ha11_p" loc="P30"/>
+		<pin index="296" name="fmc_hpc0_ha12_n" loc="R21"/>
+		<pin index="297" name="fmc_hpc0_ha12_p" loc="P21"/>
+		<pin index="298" name="fmc_hpc0_ha13_n" loc="AB26"/>
+		<pin index="299" name="fmc_hpc0_ha13_p" loc="AB25"/>
+		<pin index="300" name="fmc_hpc0_ha14_n" loc="V21"/>
+		<pin index="301" name="fmc_hpc0_ha14_p" loc="U21"/>
+		<pin index="302" name="fmc_hpc0_ha15_n" loc="Y25"/>
+		<pin index="303" name="fmc_hpc0_ha15_p" loc="AA25"/>
+
+
+
+		<pin index="306" name="fmc_hpc0_hb00_cc_n" loc="G9"/>
+		<pin index="307" name="fmc_hpc0_hb00_cc_p" loc="H9"/>
+		<pin index="308" name="fmc_hpc0_hb01_n" loc="F7"/>
+		<pin index="309" name="fmc_hpc0_hb01_p" loc="F8"/>
+		<pin index="310" name="fmc_hpc0_hb02_n" loc="K7"/>
+		<pin index="311" name="fmc_hpc0_hb02_p" loc="L7"/>
+		<pin index="312" name="fmc_hpc0_hb03_n" loc="G7"/>
+		<pin index="313" name="fmc_hpc0_hb03_p" loc="H7"/>
+		<pin index="314" name="fmc_hpc0_hb04_n" loc="J9"/>
+		<pin index="315" name="fmc_hpc0_hb04_p" loc="J10"/>
+		<pin index="316" name="fmc_hpc0_hb05_n" loc="K8"/>
+		<pin index="317" name="fmc_hpc0_hb05_p" loc="L8"/>
+		<pin index="318" name="fmc_hpc0_hb06_cc_n" loc="E8"/>
+		<pin index="319" name="fmc_hpc0_hb06_cc_p" loc="F9"/>
+		<pin index="320" name="fmc_hpc0_hb07_n" loc="G11"/>
+		<pin index="321" name="fmc_hpc0_hb07_p" loc="H12"/>
+		<pin index="322" name="fmc_hpc0_hb08_n" loc="H11"/>
+		<pin index="323" name="fmc_hpc0_hb08_p" loc="J11"/>
+		<pin index="324" name="fmc_hpc0_hb09_n" loc="H8"/>
+		<pin index="325" name="fmc_hpc0_hb09_p" loc="J8"/>
+		<pin index="326" name="fmc_hpc0_hb10_n" loc="D6"/>
+		<pin index="327" name="fmc_hpc0_hb10_p" loc="E7"/>
+		<pin index="328" name="fmc_hpc0_hb11_n" loc="K10"/>
+		<pin index="329" name="fmc_hpc0_hb11_p" loc="K11"/>
+		<pin index="330" name="fmc_hpc0_hb12_n" loc="D11"/>
+		<pin index="331" name="fmc_hpc0_hb12_p" loc="E11"/>
+		<pin index="332" name="fmc_hpc0_hb13_n" loc="F10"/>
+		<pin index="333" name="fmc_hpc0_hb13_p" loc="G10"/>
+		<pin index="334" name="fmc_hpc0_hb14_n" loc="B7"/>
+		<pin index="335" name="fmc_hpc0_hb14_p" loc="C7"/>
+		<pin index="336" name="fmc_hpc0_hb15_n" loc="A7"/>
+		<pin index="337" name="fmc_hpc0_hb15_p" loc="A8"/>
+		<pin index="338" name="fmc_hpc0_hb16_n" loc="A9"/>
+		<pin index="339" name="fmc_hpc0_hb16_p" loc="B9"/>
+		<pin index="340" name="fmc_hpc0_hb17_cc_n" loc="D8"/>
+		<pin index="341" name="fmc_hpc0_hb17_cc_p" loc="D9"/>
+		<pin index="342" name="fmc_hpc0_hb18_n" loc="B6"/>
+		<pin index="343" name="fmc_hpc0_hb18_p" loc="C6"/>
+		<pin index="344" name="fmc_hpc0_hb19_n" loc="D10"/>
+		<pin index="345" name="fmc_hpc0_hb19_p" loc="E10"/>
+		<pin index="346" name="fmc_hpc0_hb20_n" loc="C8"/>
+		<pin index="347" name="fmc_hpc0_hb20_p" loc="C9"/>
+		<pin index="348" name="fmc_hpc0_hb21_n" loc="A10"/>
+		<pin index="349" name="fmc_hpc0_hb21_p" loc="B10"/>
+
+		<pin index="350" name="fmc_hpc0_iic_scl_main" loc="L10"/>
+		<pin index="351" name="fmc_hpc0_iic_sda_main" loc="L9"/>
+
+		<!-- FMC B connector -->
+		<pin index="352" name="fmc_hpc1_la00_cc_n" loc="AF22"/>
+		<pin index="353" name="fmc_hpc1_la00_cc_p" loc="AE22"/>
+		<pin index="354" name="fmc_hpc1_la01_cc_n" loc="AG14"/>
+		<pin index="355" name="fmc_hpc1_la01_cc_p" loc="AF14"/>
+		<pin index="356" name="fmc_hpc1_la02_n" loc="AA14"/>
+		<pin index="357" name="fmc_hpc1_la02_p" loc="AA15"/>
+		<pin index="358" name="fmc_hpc1_la03_n" loc="Y23"/>
+		<pin index="359" name="fmc_hpc1_la03_p" loc="Y22"/>
+		<pin index="360" name="fmc_hpc1_la04_n" loc="AD13"/>
+		<pin index="361" name="fmc_hpc1_la04_p" loc="AD14"/>
+		<pin index="362" name="fmc_hpc1_la05_n" loc="AB16"/>
+		<pin index="363" name="fmc_hpc1_la05_p" loc="AB17"/>
+		<pin index="364" name="fmc_hpc1_la06_n" loc="AB22"/>
+		<pin index="365" name="fmc_hpc1_la06_p" loc="AB21"/>
+		<pin index="366" name="fmc_hpc1_la07_n" loc="AD15"/>
+		<pin index="367" name="fmc_hpc1_la07_p" loc="AD16"/>
+		<pin index="368" name="fmc_hpc1_la08_n" loc="AE21"/>
+		<pin index="369" name="fmc_hpc1_la08_p" loc="AD21"/>
+		<pin index="370" name="fmc_hpc1_la09_n" loc="AH12"/>
+		<pin index="371" name="fmc_hpc1_la09_p" loc="AG12"/>
+		<pin index="372" name="fmc_hpc1_la10_n" loc="AF13"/>
+		<pin index="373" name="fmc_hpc1_la10_p" loc="AE13"/>
+		<pin index="374" name="fmc_hpc1_la11_n" loc="AH13"/>
+		<pin index="375" name="fmc_hpc1_la11_p" loc="AH14"/>
+		<pin index="376" name="fmc_hpc1_la12_n" loc="AE17"/>
+		<pin index="377" name="fmc_hpc1_la12_p" loc="AE18"/>
+		<pin index="378" name="fmc_hpc1_la13_n" loc="AG15"/>
+		<pin index="379" name="fmc_hpc1_la13_p" loc="AF15"/>
+		<pin index="380" name="fmc_hpc1_la14_n" loc="AE15"/>
+		<pin index="381" name="fmc_hpc1_la14_p" loc="AE16"/>
+		<pin index="382" name="fmc_hpc1_la15_n" loc="AK12"/>
+		<pin index="383" name="fmc_hpc1_la15_p" loc="AK13"/>
+		<pin index="384" name="fmc_hpc1_la16_n" loc="AJ13"/>
+		<pin index="385" name="fmc_hpc1_la16_p" loc="AJ14"/>
+		<pin index="386" name="fmc_hpc1_la17_cc_n" loc="AG16"/>
+		<pin index="387" name="fmc_hpc1_la17_cc_p" loc="AG17"/>
+		<pin index="388" name="fmc_hpc1_la18_cc_n" loc="AH21"/>
+		<pin index="389" name="fmc_hpc1_la18_cc_p" loc="AG21"/>
+		<pin index="390" name="fmc_hpc1_la19_n" loc="AH16"/>
+		<pin index="391" name="fmc_hpc1_la19_p" loc="AH17"/>
+		<pin index="392" name="fmc_hpc1_la20_n" loc="AK15"/>
+		<pin index="393" name="fmc_hpc1_la20_p" loc="AJ15"/>
+		<pin index="394" name="fmc_hpc1_la21_n" loc="AK18"/>
+		<pin index="395" name="fmc_hpc1_la21_p" loc="AK17"/>
+		<pin index="396" name="fmc_hpc1_la22_n" loc="AJ18"/>
+		<pin index="397" name="fmc_hpc1_la22_p" loc="AH18"/>
+		<pin index="398" name="fmc_hpc1_la23_n" loc="AK16"/>
+		<pin index="399" name="fmc_hpc1_la23_p" loc="AJ16"/>
+		<pin index="400" name="fmc_hpc1_la24_n" loc="AK20"/>
+		<pin index="401" name="fmc_hpc1_la24_p" loc="AJ20"/>
+		<pin index="402" name="fmc_hpc1_la25_n" loc="AH22"/>
+		<pin index="403" name="fmc_hpc1_la25_p" loc="AG22"/>
+		<pin index="404" name="fmc_hpc1_la26_n" loc="AK21"/>
+		<pin index="405" name="fmc_hpc1_la26_p" loc="AJ21"/>
+		<pin index="406" name="fmc_hpc1_la27_n" loc="AJ19"/>
+		<pin index="407" name="fmc_hpc1_la27_p" loc="AH19"/>
+		<pin index="408" name="fmc_hpc1_la28_n" loc="AF24"/>
+		<pin index="409" name="fmc_hpc1_la28_p" loc="AF23"/>
+		<pin index="410" name="fmc_hpc1_la29_n" loc="AK23"/>
+		<pin index="411" name="fmc_hpc1_la29_p" loc="AK22"/>
+		<pin index="412" name="fmc_hpc1_la30_n" loc="AJ24"/>
+		<pin index="413" name="fmc_hpc1_la30_p" loc="AJ23"/>
+		<pin index="414" name="fmc_hpc1_la31_n" loc="AH24"/>
+		<pin index="415" name="fmc_hpc1_la31_p" loc="AH23"/>
+		<pin index="416" name="fmc_hpc1_la32_n" loc="AG25"/>
+		<pin index="417" name="fmc_hpc1_la32_p" loc="AG24"/>
+		<pin index="418" name="fmc_hpc1_la33_n" loc="AK25"/>
+		<pin index="419" name="fmc_hpc1_la33_p" loc="AJ25"/>
+
+		<pin index="452" name="fmc_hpc1_clk0_m2c_n" loc="AA19"/>
+		<pin index="453" name="fmc_hpc1_clk0_m2c_p" loc="AA18"/>
+		<pin index="454" name="fmc_hpc1_clk1_m2c_n" loc="AB20"/>
+		<pin index="455" name="fmc_hpc1_clk1_m2c_p" loc="AB19"/>
+
+		<pin index="456" name="fmc_hpc1_gbtclk0_m2c_p" loc="U7"/>
+		<pin index="457" name="fmc_hpc1_gbtclk0_m2c_n" loc="U8"/>
+		<pin index="458" name="fmc_hpc1_gbtclk1_m2c_p" loc="N7"/>
+		<pin index="459" name="fmc_hpc1_gbtclk1_m2c_n" loc="N8"/>
+
+		<pin index="460" name="fmc_hpc1_ha00_cc_n" loc="AG20"/>
+		<pin index="461" name="fmc_hpc1_ha00_cc_p" loc="AF20"/>
+		<pin index="462" name="fmc_hpc1_ha01_cc_n" loc="AE23"/>
+		<pin index="463" name="fmc_hpc1_ha01_cc_p" loc="AD23"/>
+		<pin index="464" name="fmc_hpc1_ha02_n" loc="AC16"/>
+		<pin index="465" name="fmc_hpc1_ha02_p" loc="AC17"/>
+		<pin index="466" name="fmc_hpc1_ha03_n" loc="AB14"/>
+		<pin index="467" name="fmc_hpc1_ha03_p" loc="AB15"/>
+		<pin index="468" name="fmc_hpc1_ha04_n" loc="AB24"/>
+		<pin index="469" name="fmc_hpc1_ha04_p" loc="AA24"/>
+		<pin index="470" name="fmc_hpc1_ha05_n" loc="AC23"/>
+		<pin index="471" name="fmc_hpc1_ha05_p" loc="AC22"/>
+		<pin index="472" name="fmc_hpc1_ha06_n" loc="AC13"/>
+		<pin index="473" name="fmc_hpc1_ha06_p" loc="AC14"/>
+		<pin index="474" name="fmc_hpc1_ha07_n" loc="AC12"/>
+		<pin index="475" name="fmc_hpc1_ha07_p" loc="AB12"/>
+		<pin index="476" name="fmc_hpc1_ha08_n" loc="Y21"/>
+		<pin index="477" name="fmc_hpc1_ha08_p" loc="W21"/>
+		<pin index="478" name="fmc_hpc1_ha09_n" loc="AA23"/>
+		<pin index="479" name="fmc_hpc1_ha09_p" loc="AA22"/>
+		<pin index="480" name="fmc_hpc1_ha10_n" loc="AF17"/>
+		<pin index="481" name="fmc_hpc1_ha10_p" loc="AF18"/>
+		<pin index="482" name="fmc_hpc1_ha11_n" loc="AG19"/>
+		<pin index="483" name="fmc_hpc1_ha11_p" loc="AF19"/>
+		<pin index="484" name="fmc_hpc1_ha12_n" loc="AF12"/>
+		<pin index="485" name="fmc_hpc1_ha12_p" loc="AE12"/>
+		<pin index="486" name="fmc_hpc1_ha13_n" loc="AD24"/>
+		<pin index="487" name="fmc_hpc1_ha13_p" loc="AC24"/>
+		<pin index="488" name="fmc_hpc1_ha14_n" loc="AA13"/>
+		<pin index="489" name="fmc_hpc1_ha14_p" loc="AA17"/>
+		<pin index="490" name="fmc_hpc1_ha15_n" loc="W23"/>
+		<pin index="491" name="fmc_hpc1_ha15_p" loc="AC21"/>
+
+
+
+		<pin index="494" name="fmc_hpc1_hb00_cc_n" loc="E5"/>
+		<pin index="495" name="fmc_hpc1_hb00_cc_p" loc="F5"/>
+		<pin index="496" name="fmc_hpc1_hb01_n" loc="H3"/>
+		<pin index="497" name="fmc_hpc1_hb01_p" loc="H4"/>
+		<pin index="498" name="fmc_hpc1_hb02_n" loc="A4"/>
+		<pin index="499" name="fmc_hpc1_hb02_p" loc="A5"/>
+		<pin index="500" name="fmc_hpc1_hb03_n" loc="B4"/>
+		<pin index="501" name="fmc_hpc1_hb03_p" loc="B5"/>
+		<pin index="502" name="fmc_hpc1_hb04_n" loc="C3"/>
+		<pin index="503" name="fmc_hpc1_hb04_p" loc="C4"/>
+		<pin index="504" name="fmc_hpc1_hb05_n" loc="C1"/>
+		<pin index="505" name="fmc_hpc1_hb05_p" loc="C2"/>
+		<pin index="506" name="fmc_hpc1_hb06_cc_n" loc="F3"/>
+		<pin index="507" name="fmc_hpc1_hb06_cc_p" loc="F4"/>
+		<pin index="508" name="fmc_hpc1_hb07_n" loc="D5"/>
+		<pin index="509" name="fmc_hpc1_hb07_p" loc="E6"/>
+		<pin index="510" name="fmc_hpc1_hb08_n" loc="D3"/>
+		<pin index="511" name="fmc_hpc1_hb08_p" loc="D4"/>
+		<pin index="512" name="fmc_hpc1_hb09_n" loc="D1"/>
+		<pin index="513" name="fmc_hpc1_hb09_p" loc="E1"/>
+		<pin index="514" name="fmc_hpc1_hb10_n" loc="E2"/>
+		<pin index="515" name="fmc_hpc1_hb10_p" loc="E3"/>
+		<pin index="516" name="fmc_hpc1_hb11_n" loc="G6"/>
+		<pin index="517" name="fmc_hpc1_hb11_p" loc="H6"/>
+		<pin index="518" name="fmc_hpc1_hb12_n" loc="G1"/>
+		<pin index="519" name="fmc_hpc1_hb12_p" loc="H2"/>
+		<pin index="520" name="fmc_hpc1_hb13_n" loc="F2"/>
+		<pin index="521" name="fmc_hpc1_hb13_p" loc="G2"/>
+		<pin index="522" name="fmc_hpc1_hb14_n" loc="J5"/>
+		<pin index="523" name="fmc_hpc1_hb14_p" loc="K5"/>
+		<pin index="524" name="fmc_hpc1_hb15_n" loc="K2"/>
+		<pin index="525" name="fmc_hpc1_hb15_p" loc="K3"/>
+		<pin index="526" name="fmc_hpc1_hb16_n" loc="K1"/>
+		<pin index="527" name="fmc_hpc1_hb16_p" loc="L1"/>
+		<pin index="528" name="fmc_hpc1_hb17_cc_n" loc="G4"/>
+		<pin index="529" name="fmc_hpc1_hb17_cc_p" loc="G5"/>
+		<pin index="530" name="fmc_hpc1_hb18_n" loc="J6"/>
+		<pin index="531" name="fmc_hpc1_hb18_p" loc="K6"/>
+		<pin index="532" name="fmc_hpc1_hb19_n" loc="H1"/>
+		<pin index="533" name="fmc_hpc1_hb19_p" loc="J1"/>
+		<pin index="534" name="fmc_hpc1_hb20_n" loc="J3"/>
+		<pin index="535" name="fmc_hpc1_hb20_p" loc="J4"/>
+		<pin index="536" name="fmc_hpc1_hb21_n" loc="L2"/>
+		<pin index="537" name="fmc_hpc1_hb21_p" loc="L3"/>
+
+		<pin index="538" name="fmc_hpc1_iic_scl_main" loc="B2"/>
+		<pin index="539" name="fmc_hpc1_iic_sda_main" loc="B1"/>
+
+	</pins>
+</part_info>
