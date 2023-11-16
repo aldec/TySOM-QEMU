@@ -34,6 +34,8 @@ sed -i '17,$d' ./riviera/${hw_design_name}_wrapper_simulate.do
 
 sed -i s'/xil_defaultlib.glbl/xil_defaultlib.glbl \\\
 -g$GENERIC_PATH=$env(RPORT_PATH_HDL) -g$QUANTUM_GENERIC_PATH=$env(SYNC_QUANTUM) \n \
+wave \/$env(hw_design_name)_wrapper\/leds* \n \
+wave \/$env(hw_design_name)_wrapper\/$env(hw_design_name)_i\/axi_gpio_1\/* \n \
 run -all/' ./riviera/${hw_design_name}_wrapper_simulate.do
 
 python3 ./scripts/generate_sim_files.py  hardware/${hw_project_name}/${hw_project_name}.gen/sources_1/bd/${hw_design_name}/ip/${hw_design_name}_processing_system7_0_0/${hw_design_name}_processing_system7_0_0_stub.vhdl riviera/
