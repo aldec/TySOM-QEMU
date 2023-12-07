@@ -2,7 +2,8 @@
  * Top level for Zynq Cosim
  *
  * Copyright (c) 2020 REDS
- * Written by Rick Wertenbroek changed by B&R to fit with the RivieraPro
+ * Written by Rick Wertenbroek
+ * Adjusted for Aldec Riviera-PRO - R&B 2021 Aldec
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -64,7 +65,7 @@ public:
     //--------------------------------------------------------------------------------
     // Generics //
     //--------------------------------------------------------------------------------
-    
+
 
     #ifdef __QEMU_PATH_TO_SOCKET__
         #define pathQ(x) #x
@@ -73,10 +74,10 @@ public:
     #else
         std::string QEMU_PATH_TO_SOCKET_G = "unix:/path/to/qemu-rport-_cosim@0";
     #endif
-    
+
     #ifdef __QEMU_SYNC_QUANTUM_G__
         int QEMU_SYNC_QUANTUM_G = __QEMU_SYNC_QUANTUM_G__;
-    #else 
+    #else
         int QEMU_SYNC_QUANTUM_G = 10000;
     #endif
 
@@ -1181,19 +1182,19 @@ public:
         fclk_clk1           ("fclk_clk1"),
         fclk_clk2           ("fclk_clk2"),
         fclk_clk3           ("fclk_clk3"),
-        
-        m_axi_gp0_aclk      ("m_axi_gp0_aclk"),     
-        m_axi_gp0_aresetn   ("m_axi_gp0_aresetn"),          
-        m_axi_gp0_awvalid   ("m_axi_gp0_awvalid"),      
-        m_axi_gp0_awready   ("m_axi_gp0_awready"),      
-        m_axi_gp0_awaddr    ("m_axi_gp0_awaddr"),       
-        m_axi_gp0_awprot    ("m_axi_gp0_awprot"),       
-        m_axi_gp0_awqos     ("m_axi_gp0_awqos"),        
-        m_axi_gp0_awcache   ("m_axi_gp0_awcache"),      
-        m_axi_gp0_awburst   ("m_axi_gp0_awburst"),      
-        m_axi_gp0_awsize    ("m_axi_gp0_awsize"),       
-        m_axi_gp0_awlen     ("m_axi_gp0_awlen"),        
-        m_axi_gp0_awid      ("m_axi_gp0_awid"),     
+
+        m_axi_gp0_aclk      ("m_axi_gp0_aclk"),
+        m_axi_gp0_aresetn   ("m_axi_gp0_aresetn"),
+        m_axi_gp0_awvalid   ("m_axi_gp0_awvalid"),
+        m_axi_gp0_awready   ("m_axi_gp0_awready"),
+        m_axi_gp0_awaddr    ("m_axi_gp0_awaddr"),
+        m_axi_gp0_awprot    ("m_axi_gp0_awprot"),
+        m_axi_gp0_awqos     ("m_axi_gp0_awqos"),
+        m_axi_gp0_awcache   ("m_axi_gp0_awcache"),
+        m_axi_gp0_awburst   ("m_axi_gp0_awburst"),
+        m_axi_gp0_awsize    ("m_axi_gp0_awsize"),
+        m_axi_gp0_awlen     ("m_axi_gp0_awlen"),
+        m_axi_gp0_awid      ("m_axi_gp0_awid"),
         m_axi_gp0_awlock    ("m_axi_gp0_awlock"),
         m_axi_gp0_wvalid    ("m_axi_gp0_wvalid"),
         m_axi_gp0_wready    ("m_axi_gp0_wready"),
@@ -1223,19 +1224,19 @@ public:
         m_axi_gp0_rlast     ("m_axi_gp0_rlast"),
         m_axi_gp0_arregion  ("m_axi_gp0_arregion"),
         m_axi_gp0_awregion  ("m_axi_gp0_awregion"),
-        
-        m_axi_gp1_aclk      ("m_axi_gp1_aclk"),     
-        m_axi_gp1_aresetn   ("m_axi_gp1_aresetn"),          
-        m_axi_gp1_awvalid   ("m_axi_gp1_awvalid"),      
-        m_axi_gp1_awready   ("m_axi_gp1_awready"),      
-        m_axi_gp1_awaddr    ("m_axi_gp1_awaddr"),       
-        m_axi_gp1_awprot    ("m_axi_gp1_awprot"),       
-        m_axi_gp1_awqos     ("m_axi_gp1_awqos"),        
-        m_axi_gp1_awcache   ("m_axi_gp1_awcache"),      
-        m_axi_gp1_awburst   ("m_axi_gp1_awburst"),      
-        m_axi_gp1_awsize    ("m_axi_gp1_awsize"),       
-        m_axi_gp1_awlen     ("m_axi_gp1_awlen"),        
-        m_axi_gp1_awid      ("m_axi_gp1_awid"),     
+
+        m_axi_gp1_aclk      ("m_axi_gp1_aclk"),
+        m_axi_gp1_aresetn   ("m_axi_gp1_aresetn"),
+        m_axi_gp1_awvalid   ("m_axi_gp1_awvalid"),
+        m_axi_gp1_awready   ("m_axi_gp1_awready"),
+        m_axi_gp1_awaddr    ("m_axi_gp1_awaddr"),
+        m_axi_gp1_awprot    ("m_axi_gp1_awprot"),
+        m_axi_gp1_awqos     ("m_axi_gp1_awqos"),
+        m_axi_gp1_awcache   ("m_axi_gp1_awcache"),
+        m_axi_gp1_awburst   ("m_axi_gp1_awburst"),
+        m_axi_gp1_awsize    ("m_axi_gp1_awsize"),
+        m_axi_gp1_awlen     ("m_axi_gp1_awlen"),
+        m_axi_gp1_awid      ("m_axi_gp1_awid"),
         m_axi_gp1_awlock    ("m_axi_gp1_awlock"),
         m_axi_gp1_wvalid    ("m_axi_gp1_wvalid"),
         m_axi_gp1_wready    ("m_axi_gp1_wready"),
@@ -1264,93 +1265,93 @@ public:
         m_axi_gp1_rid       ("m_axi_gp1_rid"),
         m_axi_gp1_rlast     ("m_axi_gp1_rlast"),
         m_axi_gp1_arregion  ("m_axi_gp1_arregion"),
-        m_axi_gp1_awregion  ("m_axi_gp1_awregion"),     
-                
-        s_axi_gp0_aclk      ("s_axi_gp0_aclk"),     
-        s_axi_gp0_aresetn   ("s_axi_gp0_aresetn"),          
-        s_axi_gp0_awvalid   ("s_axi_gp0_awvalid"),      
-        s_axi_gp0_awready   ("s_axi_gp0_awready"),      
-        s_axi_gp0_awaddr    ("s_axi_gp0_awaddr"),       
-        s_axi_gp0_awprot    ("s_axi_gp0_awprot"),       
-        s_axi_gp0_awregion  ("s_axi_gp0_awregion"),     
-        s_axi_gp0_awqos     ("s_axi_gp0_awqos"),        
-        s_axi_gp0_awcache   ("s_axi_gp0_awcache"),      
-        s_axi_gp0_awburst   ("s_axi_gp0_awburst"),      
-        s_axi_gp0_awsize    ("s_axi_gp0_awsize"),       
-        s_axi_gp0_awlen     ("s_axi_gp0_awlen"),            
-        s_axi_gp0_awid      ("s_axi_gp0_awid"),     
-        s_axi_gp0_awlock    ("s_axi_gp0_awlock"),       
-        s_axi_gp0_wvalid    ("s_axi_gp0_wvalid"),       
-        s_axi_gp0_wready    ("s_axi_gp0_wready"),       
-        s_axi_gp0_wdata     ("s_axi_gp0_wdata"),        
-        s_axi_gp0_wstrb     ("s_axi_gp0_wstrb"),    
+        m_axi_gp1_awregion  ("m_axi_gp1_awregion"),
+
+        s_axi_gp0_aclk      ("s_axi_gp0_aclk"),
+        s_axi_gp0_aresetn   ("s_axi_gp0_aresetn"),
+        s_axi_gp0_awvalid   ("s_axi_gp0_awvalid"),
+        s_axi_gp0_awready   ("s_axi_gp0_awready"),
+        s_axi_gp0_awaddr    ("s_axi_gp0_awaddr"),
+        s_axi_gp0_awprot    ("s_axi_gp0_awprot"),
+        s_axi_gp0_awregion  ("s_axi_gp0_awregion"),
+        s_axi_gp0_awqos     ("s_axi_gp0_awqos"),
+        s_axi_gp0_awcache   ("s_axi_gp0_awcache"),
+        s_axi_gp0_awburst   ("s_axi_gp0_awburst"),
+        s_axi_gp0_awsize    ("s_axi_gp0_awsize"),
+        s_axi_gp0_awlen     ("s_axi_gp0_awlen"),
+        s_axi_gp0_awid      ("s_axi_gp0_awid"),
+        s_axi_gp0_awlock    ("s_axi_gp0_awlock"),
+        s_axi_gp0_wvalid    ("s_axi_gp0_wvalid"),
+        s_axi_gp0_wready    ("s_axi_gp0_wready"),
+        s_axi_gp0_wdata     ("s_axi_gp0_wdata"),
+        s_axi_gp0_wstrb     ("s_axi_gp0_wstrb"),
         s_axi_gp0_wlast     ("s_axi_gp0_wlast"),
-        s_axi_gp0_bvalid    ("s_axi_gp0_bvalid"),       
-        s_axi_gp0_bready    ("s_axi_gp0_bready"),       
-        s_axi_gp0_bresp     ("s_axi_gp0_bresp"),        
-        s_axi_gp0_bid       ("s_axi_gp0_bid"), 
-        s_axi_gp0_arvalid   ("s_axi_gp0_arvalid"), 
-        s_axi_gp0_arready   ("s_axi_gp0_arready"), 
-        s_axi_gp0_araddr    ("s_axi_gp0_araddr"), 
-        s_axi_gp0_arprot    ("s_axi_gp0_arprot"), 
-        s_axi_gp0_arregion  ("s_axi_gp0_arregion"), 
-        s_axi_gp0_arqos     ("s_axi_gp0_arqos"), 
-        s_axi_gp0_arcache   ("s_axi_gp0_arcache"), 
-        s_axi_gp0_arburst   ("s_axi_gp0_arburst"), 
-        s_axi_gp0_arsize    ("s_axi_gp0_arsize"), 
-        s_axi_gp0_arlen     ("s_axi_gp0_arlen"), 
-        s_axi_gp0_arid      ("s_axi_gp0_arid"), 
-        s_axi_gp0_arlock    ("s_axi_gp0_arlock"), 
+        s_axi_gp0_bvalid    ("s_axi_gp0_bvalid"),
+        s_axi_gp0_bready    ("s_axi_gp0_bready"),
+        s_axi_gp0_bresp     ("s_axi_gp0_bresp"),
+        s_axi_gp0_bid       ("s_axi_gp0_bid"),
+        s_axi_gp0_arvalid   ("s_axi_gp0_arvalid"),
+        s_axi_gp0_arready   ("s_axi_gp0_arready"),
+        s_axi_gp0_araddr    ("s_axi_gp0_araddr"),
+        s_axi_gp0_arprot    ("s_axi_gp0_arprot"),
+        s_axi_gp0_arregion  ("s_axi_gp0_arregion"),
+        s_axi_gp0_arqos     ("s_axi_gp0_arqos"),
+        s_axi_gp0_arcache   ("s_axi_gp0_arcache"),
+        s_axi_gp0_arburst   ("s_axi_gp0_arburst"),
+        s_axi_gp0_arsize    ("s_axi_gp0_arsize"),
+        s_axi_gp0_arlen     ("s_axi_gp0_arlen"),
+        s_axi_gp0_arid      ("s_axi_gp0_arid"),
+        s_axi_gp0_arlock    ("s_axi_gp0_arlock"),
         s_axi_gp0_rvalid    ("s_axi_gp0_rvalid"),
         s_axi_gp0_rready    ("s_axi_gp0_rready"),
         s_axi_gp0_rdata     ("s_axi_gp0_rdata"),
         s_axi_gp0_rresp     ("s_axi_gp0_rresp"),
         s_axi_gp0_rid       ("s_axi_gp0_rid"),
         s_axi_gp0_rlast     ("s_axi_gp0_rlast"),
- 
-        s_axi_gp1_aclk      ("s_axi_gp1_aclk"),     
-        s_axi_gp1_aresetn   ("s_axi_gp1_aresetn"),          
-        s_axi_gp1_awvalid   ("s_axi_gp1_awvalid"),      
-        s_axi_gp1_awready   ("s_axi_gp1_awready"),      
-        s_axi_gp1_awaddr    ("s_axi_gp1_awaddr"),       
-        s_axi_gp1_awprot    ("s_axi_gp1_awprot"),       
-        s_axi_gp1_awregion  ("s_axi_gp1_awregion"),     
-        s_axi_gp1_awqos     ("s_axi_gp1_awqos"),        
-        s_axi_gp1_awcache   ("s_axi_gp1_awcache"),      
-        s_axi_gp1_awburst   ("s_axi_gp1_awburst"),      
-        s_axi_gp1_awsize    ("s_axi_gp1_awsize"),       
-        s_axi_gp1_awlen     ("s_axi_gp1_awlen"),            
-        s_axi_gp1_awid      ("s_axi_gp1_awid"),     
-        s_axi_gp1_awlock    ("s_axi_gp1_awlock"),       
-        s_axi_gp1_wvalid    ("s_axi_gp1_wvalid"),       
-        s_axi_gp1_wready    ("s_axi_gp1_wready"),       
-        s_axi_gp1_wdata     ("s_axi_gp1_wdata"),        
-        s_axi_gp1_wstrb     ("s_axi_gp1_wstrb"),    
+
+        s_axi_gp1_aclk      ("s_axi_gp1_aclk"),
+        s_axi_gp1_aresetn   ("s_axi_gp1_aresetn"),
+        s_axi_gp1_awvalid   ("s_axi_gp1_awvalid"),
+        s_axi_gp1_awready   ("s_axi_gp1_awready"),
+        s_axi_gp1_awaddr    ("s_axi_gp1_awaddr"),
+        s_axi_gp1_awprot    ("s_axi_gp1_awprot"),
+        s_axi_gp1_awregion  ("s_axi_gp1_awregion"),
+        s_axi_gp1_awqos     ("s_axi_gp1_awqos"),
+        s_axi_gp1_awcache   ("s_axi_gp1_awcache"),
+        s_axi_gp1_awburst   ("s_axi_gp1_awburst"),
+        s_axi_gp1_awsize    ("s_axi_gp1_awsize"),
+        s_axi_gp1_awlen     ("s_axi_gp1_awlen"),
+        s_axi_gp1_awid      ("s_axi_gp1_awid"),
+        s_axi_gp1_awlock    ("s_axi_gp1_awlock"),
+        s_axi_gp1_wvalid    ("s_axi_gp1_wvalid"),
+        s_axi_gp1_wready    ("s_axi_gp1_wready"),
+        s_axi_gp1_wdata     ("s_axi_gp1_wdata"),
+        s_axi_gp1_wstrb     ("s_axi_gp1_wstrb"),
         s_axi_gp1_wlast     ("s_axi_gp1_wlast"),
-        s_axi_gp1_bvalid    ("s_axi_gp1_bvalid"),       
-        s_axi_gp1_bready    ("s_axi_gp1_bready"),       
-        s_axi_gp1_bresp     ("s_axi_gp1_bresp"),        
-        s_axi_gp1_bid       ("s_axi_gp1_bid"), 
-        s_axi_gp1_arvalid   ("s_axi_gp1_arvalid"), 
-        s_axi_gp1_arready   ("s_axi_gp1_arready"), 
-        s_axi_gp1_araddr    ("s_axi_gp1_araddr"), 
-        s_axi_gp1_arprot    ("s_axi_gp1_arprot"), 
-        s_axi_gp1_arregion  ("s_axi_gp1_arregion"), 
-        s_axi_gp1_arqos     ("s_axi_gp1_arqos"), 
-        s_axi_gp1_arcache   ("s_axi_gp1_arcache"), 
-        s_axi_gp1_arburst   ("s_axi_gp1_arburst"), 
-        s_axi_gp1_arsize    ("s_axi_gp1_arsize"), 
-        s_axi_gp1_arlen     ("s_axi_gp1_arlen"), 
-        s_axi_gp1_arid      ("s_axi_gp1_arid"), 
-        s_axi_gp1_arlock    ("s_axi_gp1_arlock"), 
+        s_axi_gp1_bvalid    ("s_axi_gp1_bvalid"),
+        s_axi_gp1_bready    ("s_axi_gp1_bready"),
+        s_axi_gp1_bresp     ("s_axi_gp1_bresp"),
+        s_axi_gp1_bid       ("s_axi_gp1_bid"),
+        s_axi_gp1_arvalid   ("s_axi_gp1_arvalid"),
+        s_axi_gp1_arready   ("s_axi_gp1_arready"),
+        s_axi_gp1_araddr    ("s_axi_gp1_araddr"),
+        s_axi_gp1_arprot    ("s_axi_gp1_arprot"),
+        s_axi_gp1_arregion  ("s_axi_gp1_arregion"),
+        s_axi_gp1_arqos     ("s_axi_gp1_arqos"),
+        s_axi_gp1_arcache   ("s_axi_gp1_arcache"),
+        s_axi_gp1_arburst   ("s_axi_gp1_arburst"),
+        s_axi_gp1_arsize    ("s_axi_gp1_arsize"),
+        s_axi_gp1_arlen     ("s_axi_gp1_arlen"),
+        s_axi_gp1_arid      ("s_axi_gp1_arid"),
+        s_axi_gp1_arlock    ("s_axi_gp1_arlock"),
         s_axi_gp1_rvalid    ("s_axi_gp1_rvalid"),
         s_axi_gp1_rready    ("s_axi_gp1_rready"),
         s_axi_gp1_rdata     ("s_axi_gp1_rdata"),
         s_axi_gp1_rresp     ("s_axi_gp1_rresp"),
         s_axi_gp1_rid       ("s_axi_gp1_rid"),
         s_axi_gp1_rlast     ("s_axi_gp1_rlast"),
- 
- 
+
+
         s_axi_hp0_aclk      ("s_axi_hp0_aclk"),
         s_axi_hp0_aresetn   ("s_axi_hp0_aresetn"),
         s_axi_hp0_awvalid   ("s_axi_hp0_awvalid"),
@@ -1391,8 +1392,8 @@ public:
         s_axi_hp0_rdata     ("s_axi_hp0_rdata"),
         s_axi_hp0_rresp     ("s_axi_hp0_rresp"),
         s_axi_hp0_rid       ("s_axi_hp0_rid"),
-        s_axi_hp0_rlast     ("s_axi_hp0_rlast"), 
-         
+        s_axi_hp0_rlast     ("s_axi_hp0_rlast"),
+
         s_axi_hp1_aclk      ("s_axi_hp1_aclk"),
         s_axi_hp1_aresetn   ("s_axi_hp1_aresetn"),
         s_axi_hp1_awvalid   ("s_axi_hp1_awvalid"),
@@ -1433,8 +1434,8 @@ public:
         s_axi_hp1_rdata     ("s_axi_hp1_rdata"),
         s_axi_hp1_rresp     ("s_axi_hp1_rresp"),
         s_axi_hp1_rid       ("s_axi_hp1_rid"),
-        s_axi_hp1_rlast     ("s_axi_hp1_rlast"), 
- 
+        s_axi_hp1_rlast     ("s_axi_hp1_rlast"),
+
         s_axi_hp2_aclk      ("s_axi_hp2_aclk"),
         s_axi_hp2_aresetn   ("s_axi_hp2_aresetn"),
         s_axi_hp2_awvalid   ("s_axi_hp2_awvalid"),
@@ -1475,10 +1476,10 @@ public:
         s_axi_hp2_rdata     ("s_axi_hp2_rdata"),
         s_axi_hp2_rresp     ("s_axi_hp2_rresp"),
         s_axi_hp2_rid       ("s_axi_hp2_rid"),
-        s_axi_hp2_rlast     ("s_axi_hp2_rlast"), 
- 
- 
-  
+        s_axi_hp2_rlast     ("s_axi_hp2_rlast"),
+
+
+
         s_axi_hp3_aclk      ("s_axi_hp3_aclk"),
         s_axi_hp3_aresetn   ("s_axi_hp3_aresetn"),
         s_axi_hp3_awvalid   ("s_axi_hp3_awvalid"),
@@ -1519,10 +1520,10 @@ public:
         s_axi_hp3_rdata     ("s_axi_hp3_rdata"),
         s_axi_hp3_rresp     ("s_axi_hp3_rresp"),
         s_axi_hp3_rid       ("s_axi_hp3_rid"),
-        s_axi_hp3_rlast     ("s_axi_hp3_rlast"), 
+        s_axi_hp3_rlast     ("s_axi_hp3_rlast"),
 
-        irq_f2p             ("irq_f2p"), 
-        rst_o               ("rst_o") 
+        irq_f2p             ("irq_f2p"),
+        rst_o               ("rst_o")
     {
         // QEMU related
         /////////////////
@@ -1538,8 +1539,8 @@ public:
         sensitive << rst;
 
         zynq.rst(rst);
-        
-        
+
+
         ////////////////////
         // Generics
         ////////////////////
@@ -1566,7 +1567,7 @@ public:
 
         // M AXI GP0
         //////////////
-      
+
 
         ////////////
         // Clocks //
@@ -1591,7 +1592,7 @@ public:
         dont_initialize();
 
         /* Tie off any remaining unconnected signals.  */
-        
+
         SC_THREAD(pull_reset);
     }
 

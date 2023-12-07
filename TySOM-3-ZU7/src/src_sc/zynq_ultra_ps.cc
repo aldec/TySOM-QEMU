@@ -3,6 +3,8 @@
  *
  * Copyright (c) 2020 REDS
  * Written by Rick Wertenbroek
+ * Adjusted for Aldec Riviera-PRO - R&B 2021 Aldec
+ * Adjusted for ZynqMP - Zbyszek Tuchewicz 2022 Aldec
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal

@@ -3,6 +3,7 @@
  *
  * Copyright (c) 2020 REDS
  * Written by Rick Wertenbroek
+ * Adjusted for Aldec Riviera-PRO - R&B 2021 Aldec
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -30,8 +31,8 @@ void zynq7_ps::before_end_of_elaboration () {
     ///////////////////////
     sc_get_param("QEMU_PATH_TO_SOCKET_G", QEMU_PATH_TO_SOCKET_G);
     sc_get_param("QEMU_SYNC_QUANTUM_G",QEMU_SYNC_QUANTUM_G);
-	
-	cout << "Debug: QEMU connection path is : " << QEMU_PATH_TO_SOCKET_G << endl;
+
+    cout << "Debug: QEMU connection path is : " << QEMU_PATH_TO_SOCKET_G << endl;
 
     // Clocks
     ///////////
@@ -81,20 +82,20 @@ void zynq7_ps::before_end_of_elaboration () {
         } else {
             //SC_THREAD(fclk_clk3_disable);
             fclk_clk3_disable();
-		}
+        }
 /*
 int ADDR_WIDTH,
-	int DATA_WIDTH,
-	int ID_WIDTH = 8,
-	int AxLEN_WIDTH = 8,
-	int AxLOCK_WIDTH = 1,
-	int AWUSER_WIDTH = 2,
-	int ARUSER_WIDTH = 2,
-	int WUSER_WIDTH = 2,
-	int RUSER_WIDTH = 2,
-	int BUSER_WIDTH = 2,
-	int ACE_MODE = ACE_MODE_OFF,
-	int CD_DATA_WIDTH = DATA_WIDTH>
+    int DATA_WIDTH,
+    int ID_WIDTH = 8,
+    int AxLEN_WIDTH = 8,
+    int AxLOCK_WIDTH = 1,
+    int AWUSER_WIDTH = 2,
+    int ARUSER_WIDTH = 2,
+    int WUSER_WIDTH = 2,
+    int RUSER_WIDTH = 2,
+    int BUSER_WIDTH = 2,
+    int ACE_MODE = ACE_MODE_OFF,
+    int CD_DATA_WIDTH = DATA_WIDTH>
 */
   if (M_AXI_GP0_ENABLE_G > 0) {
             tlm2axi_gp0 = new tlm2axi_bridge<M_AXI_GP0_ADDR_WIDTH_G,
@@ -102,14 +103,14 @@ int ADDR_WIDTH,
                                              M_AXI_GP0_ID_WIDTH_G,
                                              M_AXI_GP0_AXLEN_WIDTH_G,
                                              M_AXI_GP0_AXLOCK_WIDTH_G,
-							                   0,
-							                   0,
-											   0,
-											   0,
-											   0
-											   >("tlm2axi_gp0");
-											 
-											 
+                                               0,
+                                               0,
+                                               0,
+                                               0,
+                                               0
+                                               >("tlm2axi_gp0");
+
+
 
             zynq.m_axi_gp[0]->bind(tlm2axi_gp0->tgt_socket);
 
@@ -412,10 +413,10 @@ int ADDR_WIDTH,
                                              S_AXI_HP0_AXLEN_WIDTH_G,
                                              S_AXI_HP0_AXLOCK_WIDTH_G,
                                              0,
-							                   0,
-											   0,
-											   0,
-											   0> ("axi2tlm_hp0");
+                                               0,
+                                               0,
+                                               0,
+                                               0> ("axi2tlm_hp0");
 
             zynq.s_axi_hp[0]->bind(axi2tlm_hp0->socket);
 

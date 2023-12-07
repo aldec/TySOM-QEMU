@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Aliases>
+ <alias name="virt_stat" representation="4" sign="1" float="0" reverse_order="0" precision="6">
+  <mapping value="FF" mnemonic="AW" icon="" color="#ffffff" background="#00ff00"/>
+  <mapping value="FE" mnemonic="W" icon="" color="#ffffff" background="#5555ff"/>
+  <mapping value="FD" mnemonic="B" icon="" color="#ffffff" background="#005500"/>
+  <mapping value="FC" mnemonic="AR" icon="" color="#ffffff" background="#ffaa00"/>
+  <mapping value="FB" mnemonic="R" icon="" color="#ffffff" background="#aa00ff"/>
+  <mapping value="00" mnemonic="" icon="" color="#ffffff" background="#ffffff"/>
+ </alias>
+ <slice name="slicing_status">
+  <range left="7" right="0" alias="virt_stat" display_format="0"/>
+  <range left="31" right="24" alias="virt_stat" display_format="0"/>
+  <range left="23" right="16" alias="virt_stat" display_format="0"/>
+  <range left="39" right="32" alias="virt_stat" display_format="0"/>
+  <range left="15" right="8" alias="virt_stat" display_format="0"/>
+ </slice>
+</Aliases>
