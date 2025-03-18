@@ -1,0 +1,121 @@
+/include/ "system-conf.dtsi"
+/ {
+    memory@0 {
+        reg = <0x0 0x0 0x0 0x7ff00000 0x8 0x0 0x0 0x80000000>;
+    };
+
+    chosen {
+        bootargs = "earlycon console=ttyPS0,115200 earlyprintk clk_ignore_unused cpuidle.off=1 root=/dev/ram0 rw init_fatal_sh=1";
+        stdout-path = "serial0:115200n8";
+    };
+
+
+    xlnx {
+        compatible = "xlnx,xlnk-1.0";
+    };
+    dru_clk: dru_clk {
+        #clock-cells = <0>;
+        clock-frequency = <100000000>;
+        compatible = "fixed-clock";
+    };
+    sata_clk: sata_clk {
+        compatible = "fixed-clock";
+        #clock-cells = <0>;
+        clock-frequency = <150000000>;
+    };
+    dp_clk: dp_clk {
+        compatible = "fixed-clock";
+        #clock-cells = <0>;
+        clock-frequency = <135000000>;
+    };
+
+
+};
+
+&zynqmp_dpsub{
+    status = "disabled";
+};
+
+&nand0{
+    status = "disabled";
+};
+
+&pcie{
+    status = "disabled";
+};
+
+&psgtr {
+    status = "okay";
+    clocks = <&sata_clk>, <&dp_clk>, <&dp_clk>;
+    clock-names = "ref1", "ref2", "ref3";
+};
+
+
+&gem2 {
+    status = "okay";
+    phy-handle = <&phy1>;
+    phy-mode = "rgmii-id";
+    phy-reset-duration = <2>;
+    phy-reset-active-low;
+    local-mac-address = [00 0a 35 30 02 00];
+
+    psu_ethernet_1_mdio: mdio {
+        #address-cells = <1>;
+        #size-cells = <0>;
+        phy1: phy@9 {
+            reg = <9>;
+            ti,rx-internal-delay = <0x8>;
+            ti,tx-internal-delay = <0xa>;
+            ti,fifo-depth = <0x1>;
+            reset-gpios = <&gpio 10 1>;
+        };
+    };
+};
+&gem3 {
+    status = "okay";
+    phy-handle = <&phy0>;
+    phy-mode = "rgmii-id";
+    local-mac-address = [00 0a 35 30 02 01];
+
+    psu_ethernet_2_mdio: mdio {
+        #address-cells = <1>;
+        #size-cells = <0>;
+        phy0: phy@9 {
+            reg = <0x9>;
+            ti,rx-internal-delay = <0x8>;
+            ti,tx-internal-delay = <0xa>;
+            ti,fifo-depth = <0x1>;
+            reset-gpios = <&gpio 11 1>;
+        };
+    };
+};
+
+&sata {
+    status = "disabled";
+    phy-names = "sata-phy";
+    phys = <&psgtr 1 1 1 1>;
+
+    ceva,p0-cominit-params = /bits/ 8 <0x18 0x40 0x18 0x28>;
+    ceva,p0-comwake-params = /bits/ 8 <0x06 0x14 0x08 0x0E>;
+    ceva,p0-burst-params = /bits/ 8 <0x13 0x08 0x4A 0x06>;
+    ceva,p0-retry-params = /bits/ 16 <0x96A4 0x3FFC>;
+
+    ceva,p1-cominit-params = /bits/ 8 <0x18 0x40 0x18 0x28>;
+    ceva,p1-comwake-params = /bits/ 8 <0x06 0x14 0x08 0x0E>;
+    ceva,p1-burst-params = /bits/ 8 <0x13 0x08 0x4A 0x06>;
+    ceva,p1-retry-params = /bits/ 16 <0x96A4 0x3FFC>;
+};
+
+
+&uart0 {
+    device_type = "serial";
+    port-number = <1>;
+    status = "disabled";
+    u-boot,dm-pre-reloc ;
+};
+&uart1 {
+    device_type = "serial";
+    port-number = <0>;
+    status = "okay";
+    u-boot,dm-pre-reloc ;
+};
