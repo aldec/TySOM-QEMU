@@ -150,6 +150,7 @@ entity design_1_processing_system7_0_0 is
     M_AXI_GP0_BRESP : in STD_LOGIC_VECTOR ( 1 downto 0 );
     M_AXI_GP0_RRESP : in STD_LOGIC_VECTOR ( 1 downto 0 );
     M_AXI_GP0_RDATA : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    IRQ_F2P : in STD_LOGIC_VECTOR ( 1 downto 0 );
     FCLK_CLK0 : out STD_LOGIC;
     FCLK_CLK1 : out STD_LOGIC;
     FCLK_RESET0_N : out STD_LOGIC;
@@ -305,6 +306,8 @@ begin
             m_axi_gp0_rresp   => M_AXI_GP0_RRESP,
             m_axi_gp0_rid     => M_AXI_GP0_RID,
             m_axi_gp0_rlast   => M_AXI_GP0_RLAST,
+            --__CONNECT_IRQ_F2P__
+            irq_f2p           => std_logic_vector(resize(unsigned(IRQ_F2P), 16)),
             --__
             --
             rst_o             => rst_s);

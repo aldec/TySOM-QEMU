@@ -1,5 +1,8 @@
 am.mappings.load virt_stat.xml
 
+wave /$env(hw_design_name)_wrapper/PL_leds_tri_o
+wave /$env(hw_design_name)_wrapper/PL_user_switches_tri_i
+
 set S_PATH /$env(hw_design_name)_wrapper/$env(hw_design_name)_i
 
 #wave /$env(hw_design_name)_wrapper/$env(hw_design_name)_i/axi_gpio_1/* 

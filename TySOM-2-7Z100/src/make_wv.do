@@ -1,6 +1,7 @@
 am.mappings.load virt_stat.xml
 
 wave /$env(hw_design_name)_wrapper/leds* 
+wave /$env(hw_design_name)_wrapper/switch_8bits_tri_i
 
 set S_PATH /$env(hw_design_name)_wrapper/$env(hw_design_name)_i
 

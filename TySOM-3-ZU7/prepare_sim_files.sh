@@ -31,7 +31,7 @@ set SIM_OPT \"-ieee_nowarn -i 5000 -t 1ps -relax +notimingchecks +access +r \":'
 sed -i s'/asim +access +r/eval asim $SIM_OPT/' ./riviera/${hw_design_name}_wrapper_simulate.do
 sed -i s'/+m+design_1_wrapper/+m+design_1_wrapper+axi_monitor/' ./riviera/${hw_design_name}_wrapper_simulate.do
 sed -i '17,$d' ./riviera/${hw_design_name}_wrapper_simulate.do
-sed -i s'/xil_defaultlib.glbl/xil_defaultlib.glbl work.axi_monitor \\\
+sed -i s'/xil_defaultlib.glbl/xil_defaultlib.glbl work.axi_monitor work.gpiotb \\\
 -g$GENERIC_PATH=$env(RPORT_PATH_HDL) -g$QUANTUM_GENERIC_PATH=$env(SYNC_QUANTUM) \n \
 do make_wv.do \n \
 run -all/' ./riviera/${hw_design_name}_wrapper_simulate.do
@@ -39,4 +39,5 @@ run -all/' ./riviera/${hw_design_name}_wrapper_simulate.do
 python3 ./scripts/generate_sim_files.py  hardware/${hw_project_name}/${hw_project_name}.gen/sources_1/bd/${hw_design_name}/ip/${hw_design_name}_zynq_ultra_ps_e_0_0/${hw_design_name}_zynq_ultra_ps_e_0_0_stub.vhdl riviera/
 
 sed -i 's:vcom -work xil_defaultlib -2008 ./../src/design_1_zynq_ultra_ps_e_0_0.vhd:vcom -work xil_defaultlib -2008 ./../src/design_1_zynq_ultra_ps_e_0_0.vhd \
-vlog -sv -incr -l xilinx_vip -work work "../src/testbench.sv":' ./riviera/zynq_ultra_compile_cosim.do
+vlog -sv -incr -l xilinx_vip -work work ../src/axi_monitor.sv \
+vcom -2008 -work work ../src/gpiotb.vhd:' ./riviera/zynq_ultra_compile_cosim.do

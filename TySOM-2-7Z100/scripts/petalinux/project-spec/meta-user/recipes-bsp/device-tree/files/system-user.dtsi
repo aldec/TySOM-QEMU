@@ -1,0 +1,19 @@
+/include/ "system-conf.dtsi"
+/ {
+    chosen {
+        bootargs = "console=ttyPS0,115200 earlycon root=/dev/ram0 rw uio_pdrv_genirq.of_id=generic-uio";
+        stdout-path = "serial0:115200n8";
+    };
+};
+
+&axi_gpio_0 {
+    compatible = "generic-uio";
+};
+
+&uart0 {
+    port-number = <0>;
+};
+
+&uart1 {
+    status = "disabled";
+};

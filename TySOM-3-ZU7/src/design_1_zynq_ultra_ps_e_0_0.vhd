@@ -64,7 +64,7 @@ entity design_1_zynq_ultra_ps_e_0_0 is
         S_AXI_ACE_FPD_ENABLE_G           :  integer := 0;
         --
         M_AXI_HPM0_FPD_ADDR_WIDTH_G   : integer := 40;
-        M_AXI_HPM0_FPD_DATA_WIDTH_G   : integer := 128;
+        M_AXI_HPM0_FPD_DATA_WIDTH_G   : integer := 32;
         M_AXI_HPM0_FPD_ID_WIDTH_G     : integer := 16;
         M_AXI_HPM0_FPD_AXLEN_WIDTH_G  : integer := 8;
         M_AXI_HPM0_FPD_AXLOCK_WIDTH_G : integer := 1;
@@ -148,8 +148,8 @@ entity design_1_zynq_ultra_ps_e_0_0 is
     maxigp0_awvalid : out STD_LOGIC;
     maxigp0_awuser : out STD_LOGIC_VECTOR ( 15 downto 0 );
     maxigp0_awready : in STD_LOGIC;
-    maxigp0_wdata : out STD_LOGIC_VECTOR ( 127 downto 0 );
-    maxigp0_wstrb : out STD_LOGIC_VECTOR ( 15 downto 0 );
+    maxigp0_wdata : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    maxigp0_wstrb : out STD_LOGIC_VECTOR ( 3 downto 0 );
     maxigp0_wlast : out STD_LOGIC;
     maxigp0_wvalid : out STD_LOGIC;
     maxigp0_wready : in STD_LOGIC;
@@ -169,7 +169,7 @@ entity design_1_zynq_ultra_ps_e_0_0 is
     maxigp0_aruser : out STD_LOGIC_VECTOR ( 15 downto 0 );
     maxigp0_arready : in STD_LOGIC;
     maxigp0_rid : in STD_LOGIC_VECTOR ( 15 downto 0 );
-    maxigp0_rdata : in STD_LOGIC_VECTOR ( 127 downto 0 );
+    maxigp0_rdata : in STD_LOGIC_VECTOR ( 31 downto 0 );
     maxigp0_rresp : in STD_LOGIC_VECTOR ( 1 downto 0 );
     maxigp0_rlast : in STD_LOGIC;
     maxigp0_rvalid : in STD_LOGIC;
@@ -183,7 +183,7 @@ entity design_1_zynq_ultra_ps_e_0_0 is
     emio_gpio_i : in STD_LOGIC_VECTOR ( 94 downto 0 );
     emio_gpio_o : out STD_LOGIC_VECTOR ( 94 downto 0 );
     emio_gpio_t : out STD_LOGIC_VECTOR ( 94 downto 0 );
-    pl_ps_irq0 : in STD_LOGIC_VECTOR ( 0 to 0 );
+    pl_ps_irq0 : in STD_LOGIC_VECTOR ( 1 downto 0 );
     pl_ps_irq1 : in STD_LOGIC_VECTOR ( 0 to 0 );
     pl_resetn0 : out STD_LOGIC;
     pl_clk0 : out STD_LOGIC

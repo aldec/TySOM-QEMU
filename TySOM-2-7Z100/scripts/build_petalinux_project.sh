@@ -16,6 +16,7 @@ fi
 
 pushd $project_name
 petalinux-config --get-hw-description=./../hardware --silentconfig
+petalinux-create -t apps --template c --name gpiomon --enable
 
 if [ ${_NEW} == 1 ]
 then
@@ -27,4 +28,5 @@ sed -i 's:# CONFIG_imagefeature-empty-root-password is not set:CONFIG_imagefeatu
 sed -i 's:# CONFIG_imagefeature-serial-autologin-root is not set:CONFIG_imagefeature-serial-autologin-root=y:g' project-spec/configs/rootfs_config
 
 petalinux-build
+
 popd

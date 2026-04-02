@@ -3,7 +3,6 @@
 $PETALINUX_PATH/sysroots/x86_64-petalinux-linux/usr/bin/qemu-system-aarch64 \
 -M arm-generic-fdt-7series \
 -machine linux=on \
--serial /dev/null \
 -serial mon:stdio \
 -display none \
 -kernel ./$project_name/images/linux/zImage \
